@@ -1,0 +1,10 @@
+.container {
+    color: green;
+    background-color: orange;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+p{
+    margin: 0;
+}
