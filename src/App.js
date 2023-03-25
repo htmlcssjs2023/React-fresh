@@ -2,31 +2,45 @@ import logo from './logo.svg';
 import './App.css';
 import './custom.css';
 
-const number = 28373;
-const singer = {name: 'Jihad', job:'Nai', address:'B.Baria'};
-const singer2 = {name:'Jihad Hasan', job: 'IT Engineer'};
+const persons = [
+  {name: 'Abdul Halim', age: 11, address: 'Dhaka'},
+  {name: 'Rakib', age: 10, address: 'Dhaka'},
+  {name: 'Tamjid Vai', age: 12, address: 'Dhaka'},
+  {name: 'Asraf Vai', age: 17, address: 'Dhaka'},
 
-const singerStyle = {
-  color: 'purple',
-  backgroundColor: 'white'
-}
+]
+
+const names = ['Halim', 'Rahim', 'Kabir'];
 
 function App() {
+  
   return (
     <div className="App">
-        <FullName name = 'Abdul Halim' stn_id = '8283'></FullName>
-        <p general_id = '93939'></p>
+        {/* {names.map(n => <li> Name : {n}</li>)} */}
+        {persons.map(person => <Person name = {person.name} age = {person.age} address = {person.address}></Person>)}
+
+        {names.map(na => <Name na = {na}></Name>)}
     </div>
   );
 }
 
-function FullName(props){
+function Person(props){
   return (
-    <div>
-         <h1>Full Name : {props.name}</h1>
-         <h1>Id : {props.stn_id}</h1>
+    <div className='person'>
+         <p> <strong>Name :</strong> {props.name}</p>
+         <p><strong>Age : </strong>{props.age}</p>
+         <p><strong>Address : </strong> {props.address}</p>
     </div>
 
+  );
+}
+
+function Name(props){
+  return (
+
+    <div className="name">
+        <p>{props.na}</p>
+    </div>
   );
 }
 /**
@@ -34,8 +48,5 @@ function FullName(props){
  * solution : props receive component attribute and convert these data into object of attribute. {name: 'Halim'}
  * props get data from component and send this data .
  */
-
-
-
 
 export default App;
