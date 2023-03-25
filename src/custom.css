@@ -19,3 +19,45 @@ p{
     margin: 10px auto;
     padding: 10px;
 }
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resulCardRihgt {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* .resulCardRihgt > tr > td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  } */
+  .resulCardRihgt > tr > td,
+  .resulCardRihgt > tr> th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  .tableContainer{
+    padding: 0 100px;
+  }
+
+  .circle {
+    height: 200px;
+    width: 200px;
+    background-color:blueviolet;
+    border-radius: 50%;
+    margin: 10px auto;
+    
+  }
+
+
+
+  /* tr:nth-child(even) {
+    background-color: #dddddd;
+  } */
+
+

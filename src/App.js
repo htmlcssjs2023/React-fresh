@@ -14,23 +14,28 @@ const singerStyle = {
 function App() {
   return (
     <div className="App">
-     <Zoomit></Zoomit>
-     <Zoomit></Zoomit>
-     <Zoomit></Zoomit>
-       
+        <FullName name = 'Abdul Halim' stn_id = '8283'></FullName>
+        <p general_id = '93939'></p>
     </div>
   );
 }
 
-function Zoomit(){
+function FullName(props){
   return (
-   
-    <div className='zoomit'>
-       <h3>Employee </h3>
-        <p><strong>Employee Id :</strong> {number} </p>
-        <p><strong>Employee Name :</strong> Md Abdul Halim </p>
-        <p><strong>Employee Designaiton :</strong> Software Engineer </p>
+    <div>
+         <h1>Full Name : {props.name}</h1>
+         <h1>Id : {props.stn_id}</h1>
     </div>
+
   );
 }
+/**
+ * 1. pass dynamic data to component
+ * solution : props receive component attribute and convert these data into object of attribute. {name: 'Halim'}
+ * props get data from component and send this data .
+ */
+
+
+
+
 export default App;
